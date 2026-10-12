@@ -1,7 +1,7 @@
 ---
 services:
   db:
-    image: pavanpadamata99/ptn-2:db
+    image: pavanpadamata99/python-2:db
     deploy:
       replicas: 1
     ports:
@@ -10,7 +10,7 @@ services:
       - mynetwork
 
   auth_service:
-    image: pavanpadamata/ptn-2:aut
+    image: pavanpadamata/python-2:aut
     deploy:
       replicas: 1
     ports:
@@ -22,7 +22,7 @@ services:
     
 
   book_service:
-    image: pavanpadamata/ptn-2:bok
+    image: pavanpadamata/python-2:bok
     deploy:
       replicas: 1
     ports:
@@ -32,7 +32,7 @@ services:
     depends_on:
       - db
   borrow_service:
-    image: pavanpadamata/ptn-2:bro
+    image: pavanpadamata/python-2:bro
     deploy:
       replicas: 1
     ports:
@@ -43,7 +43,7 @@ services:
       - db
 
   frontend:
-    image: pavanpadamata/ptn-2:fnd
+    image: pavanpadamata/python-2:fnd
     deploy:
       replicas: 1
     ports:
